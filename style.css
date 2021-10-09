@@ -3,16 +3,22 @@ p{
     
 }
 table{
-    background-color:red;
+    background-color: white;
     color: yellow; 
-    border: solid 1px red;
+    border: solid 3px black;
+    width: 50%;
+    margin: 10px auto;
 }
 td{
-    background-color: green;
+    background-color: chocolate;
+    border: solid 2px red;
 }
 .paros{
-    background-color: blue;
+    background-color: rebeccapurple;
 }
 .paratlan{
-    background-color: darkgoldenrod;
+    background-color: cornflowerblue ;
+}
+div{
+    border: solid 2px black;
 }
