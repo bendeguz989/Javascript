@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var random = Math.floor(Math.random()*5+1);
+        var tip = 0;
+        do {
+            tip = prompt('Találd ki a számom: ');
+            if ( tip > random) {
+            console.log('Kisebbet!');
+        } if ( tip < random ){
+            console.log('Nagyobbat!');
+        }
+        } while( tip != random) ;
+            console.log('Gratulálok, a gondolt szám az,', random);
+    </script>
+</body>
+</html>

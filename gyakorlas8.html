@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="nev">Név:</label>
+    <input type="text" id="nev" name="nev"><br>
+
+    <label for="kor">Kor:</label>
+    <input type="number" id="kor" name="kor"><br>
+
+    <label for="lany" >Nő</label>
+    <input type="radio" id="lany" name="valt" checked>
+
+    <label for="fiu">Férfi</label>
+    <input type="radio" id="fiu" name="valt"><br> 
+
+    <button onclick="koszon()">OK</button>
+
+    <div id="ki">
+
+    </div>
+    
+<script>
+    function koszon(){
+        var nev = document.getElementById("nev").value;
+        var ki = document.getElementById("ki");
+        var kor = document.getElementById("kor").value;
+        var fiu = document.getElementById("fiu");
+        if(fiu.checked){
+            document.body.style.backgroundColor=" green";
+        }
+        else{
+            document.body.style.backgroundColor=" pink";
+        }
+        if( kor < 30){
+            ki.innerHTML = "Hello "+nev;
+        }
+        else{
+            ki.innerHTML = "Jó napot "+nev;
+        }
+
+}
+</script>
+
+</body>
+</html>

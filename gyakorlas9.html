@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="szam">Adj meg egy számot:</label>
+    <input type="number" id="szam" name="random"><br>
+
+    <button onclick="kiir()">OK</button>
+
+    <div id="ki">
+
+    </div>
+
+    <script>
+        function kiir(n){
+            var szam = document.getElementById("szam").value;
+            var ki = document.getElementById("ki");
+
+
+        for(var i = 1; i <= szam; i++){
+            if(prim(i)){
+                ki.innerHTML += "<p style='color:red'>" +i+ "</p>"
+            }
+        }
+    }
+        function prim(szam){
+            var db = 0;
+            for (var i = 1; i <= szam; i++){
+                if(szam % i == 0) db++;
+            }
+            if (db == 2){
+                return true;
+            }
+            else return false;
+        }
+
+    </script>
+</body>
+</html>
