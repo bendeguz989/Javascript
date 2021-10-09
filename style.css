@@ -1,0 +1,18 @@
+p{
+    color: red;
+    
+}
+table{
+    background-color:red;
+    color: yellow; 
+    border: solid 1px red;
+}
+td{
+    background-color: green;
+}
+.paros{
+    background-color: blue;
+}
+.paratlan{
+    background-color: darkgoldenrod;
+}

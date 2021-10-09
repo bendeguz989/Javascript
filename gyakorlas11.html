@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
@@ -15,16 +16,25 @@
 
     <button onclick="kiir()">OK</button>
 
-    <div id="ki"></div>
+    <div id="ki">
+        <table id="tabla">
+
+        </table>
+    </div>
 
     <script>
         function kiir(){
             var ki = document.getElementById("ki");
             var szam = document.getElementById("szam").value;
             var nev = document.getElementById("nev").value;
+            var tabla = document.getElementById("tabla");
 
-            for(var i = 1; i <=szam; i++){ 
-                ki.innerHTML += "<p>" + nev; 
+            // var: Mindenhol érvényesűl.
+            // let: A let csak azon a blockon érvenyesűl amelykben létre lett hozva. A var pedig mindenhol érvényesűl.
+            // const: 
+
+            for(var i = 1; i <=szam; i++){  
+                tabla.innerHTML += "<tr><td>" + nev + "</td></tr>"; 
             }
         }
 
