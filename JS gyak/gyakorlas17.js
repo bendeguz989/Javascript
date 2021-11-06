@@ -1,4 +1,4 @@
-tombf=[
+var tombf=[
     ["Feri",15]
     ["Béla", 19]
     ["András", 30]

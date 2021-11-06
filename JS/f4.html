@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script>
+        class Auto {
+            constructor(tipus,ev,rendszam){
+                this.tipus = tipus;
+                this.ev = ev;
+                this.rendszam = rendszam;
+            }
+            kor(){
+                return 2021-this.ev;
+            }
+        }
+        
+        class Szemelyauto extends Auto {
+            constructor(tipus,ev,rendszam,szemelyszam){
+                super(tipus,ev,rendszam)
+                this.szemleyszam = szemelyszam;
+
+            }
+        }
+        class Teherauto extends Auto {
+            constructor(tipus,ev,rendszam,teher){
+                super(tipus,ev,rendszam)
+                this.teher = teher;
+
+            }
+        }
+        
+        let ki = document.getElementById("root");
+        let enyem = new Szemelyauto("Suzuki", 2019, "wwww333", 5);
+        let masik = new Teherauto("MAN", 2015, "uzt654", 12);
+        ki.innerHTML += masik.tipus+" "+masik.ev + " " + masik.kor()  + " eves" + " " + masik.teher + " " + "tonna ";
+    </script>
+</body>
+</html>

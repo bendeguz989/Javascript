@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="nev">Név:</label>
+    <input type="text" id="nev"><br>
+
+    <label for="nem">Nem:</label>
+    <input type="text" id="nem" ><br>
+
+    <label for="szuletev">Születési év:</label>
+    <input type="number" id="szuletev" ><br>
+
+    <label for="diak">Diák</label>
+    <input type="radio" id="diak" ><br>
+
+    <label for="tanar">Tanár</label>
+    <input type="radio" id="tanar" ><br>
+
+    <label for="szak">Szak</label>
+    <input type="number" id="szak"><br>
+
+    <label for="osztaly">Osztály</label>
+    <input type="number" id="osztaly" disabled><br>
+
+    <button onclick="hozzair()">OK</button>
+
+    <div id="root"></div>
+
+    <script>
+         
+        function kiir(){
+            var nev = document.getElementById("nev").value;
+            var nem = document.getElementById("nem").value;
+            var szuletev = document.getElementById("szuletev").value;
+            var root = document.getElementById("root");
+            var tabla = document.createElement("table");
+
+            for (var i = 0; i < d.length; i++){
+                var sor = document.createElement("tr");
+                var cella = document.createElement("td");
+                var tabla = document.createElement("table");
+                cella.innerHTML = d[i];
+                
+                sor.onclick=function(){
+                tombl.splice(i, 1);
+                kiir();
+            }
+                sor.appendChild(cella)
+                tabla.appendChild(sor);
+            }
+        }
+        root.innerHTML=" ";
+        root.appendChild(tabla);
+
+        var t = [];
+        var d = [];
+        function hozzair() {
+            var nev = document.getElementById("nev").value;
+            var nem = document.getElementById("nem").value;
+            var szuletev = document.getElementById("szuletev").value;
+            var diak = document.getElementById("diak").value;
+            var root = document.getElementById("root");
+            var uj = [nev, nem, szuletev];
+            
+            if (diak.checked){
+                d.push(uj);
+            }
+            else{
+                t.push(uj);
+            }
+            kiir();     
+        }
+
+        function valt() {
+            var nev = document.getElementById("nev").value;
+            var nem = document.getElementById("nem");
+            var szuletev = document.getElementById("szuletev").value;
+            if (tanar.checked){
+                document.getElementById("tanar").disabled = false;
+            }
+            else{
+                document.getElementById("diak").disabled = true;
+            }
+        }
+
+    
+    </script>
+
+</body>
+</html>

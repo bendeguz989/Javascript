@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script>
+        class Auto {
+            constructor(tipus,ev,rendszam){
+                this.tipus = tipus;
+                this.ev = ev;
+                this.rendszam = rendszam;
+            }
+            kor(){
+                return 2021-this.ev;
+            }
+        }
+        let enyem = new Auto("Suzuki",2019, "ABC123");
+        let ki = document.getElementById("root");
+        ki.innerHTML = enyem.tipus+" "+enyem.ev + " " + enyem.kor()+"<br>";
+        
+        let masik = new Auto("Fiat",2010, "AAA222");
+        ki.innerHTML += masik.tipus+" "+masik.ev + " " + masik.kor();
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script>
+        const diak = {
+            nev: "Peti",
+            kora: 14,
+            nem: "fiu",
+        }
+    let ki =document.getElementById("root");
+    ki.innerHTML=diak.nev;
+
+    let diakok = [
+        {nev: "Peti",kor: 14, nem: "fiu"},
+        {nev: "Feri",kor: 25, nem: "fiu"},
+        {nev: "Kitti",kor: 20, nem: "lany"},
+    ]
+
+    let tabla = document.createElement("table");
+    for (let i = 0; i < diakok.length; i++){
+        let sor = document.createElement("tr");
+        let cella = document.createElement("td");
+        cella.innerHTML = diakok[i].nev;
+        sor.appendChild(cella);
+        cella = document.createElement("td");
+        cella.innerHTML = diakok[i].nem;
+        sor.appendChild(cella);
+        tabla.appendChild(sor);
+    }
+    ki.appendChild(tabla);
+    </script>
+</body>
+</html>
