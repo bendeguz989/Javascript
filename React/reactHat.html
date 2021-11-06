@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "root"></div>
+
+    <script type="text/babel">
+        const neve = "Kitti";
+        function Koszon(props){
+            const koszones = (props.kor < 30 ? "Hello" : "Jó napot")
+            return (props.kor < 30 ? <li className="blue">{koszones} {props.nev} </li> : <li className="red">{koszones} {props.nev} </li>)  ;
+        }
+        function Beszelget(){
+            return (
+                <ol>
+                    <Koszon nev ="Kitti"  kor={80}/> 
+                    <Koszon nev ="Feri"  kor={25}/> 
+                    <Koszon nev ="Ádám" kor={30}/> 
+                    <Koszon nev ="Anna"  kor={19}/> 
+                </ol>
+            )
+        }
+        ReactDOM.render( <Beszelget/>, document.getElementById("root"));
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "root"></div>
+
+    <script type="text/babel">
+        class Kiir extends React.Component {
+            render() {
+                return (
+                    <tr>
+                        <td>{this.props.szam}</td>
+                        <td>{this.props.szam % 2 == 0 ? "Páros" : "Páratlan"}</td>
+                        <td>{prim(this.props.szam)}</td>
+                    </tr>  
+                );
+            }
+        }
+        function prim(n){
+            let db = 0;
+            for ( let i = 1; i <= n; i++ ) 
+            if (n % i == 0 ) db++;
+            return (db == 2 ? "Prím" : "Nem prim");
+        }
+        class Tabla extends React.Component {
+            render() {
+                return (
+                    <table>
+                        <Kiir szam = {10}/> 
+                        <Kiir szam = {3}/> 
+                        <Kiir szam = {2}/> 
+                        <Kiir szam = {5}/> 
+                        <Kiir szam = {1}/> 
+                    </table>
+                );
+            }
+        }
+        ReactDOM.render( <Tabla/>, document.getElementById("root"));
+    </script>
+</body>
+</html>
