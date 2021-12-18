@@ -9,7 +9,7 @@ function App() {
     this.benzin=benzin;
     this.fogyaszt=function(){
       let f = 0;
-      if(benzin){
+      if(benzin="benzin"){
         if(motor>1500){
           f=7;
         }
@@ -40,14 +40,16 @@ function App() {
     <>
       <Beker fg={setMarka} adat="Márka" tipus="text" szin="piros"/>
       <Beker fg={setMotor} adat="Motor" tipus="number" szin="kek"/>
-      <Beker fg={setBenzin} adat="Benzin" tipus="checkbox" szin="piros"/>
+      <Beker fg={setBenzin} adat="Üzemanyag" tipus="text" szin="piros"/>
       <button onClick={
         () => {
           setTomb(tomb.concat(new Auto(marka,motor,benzin)));
         }
       }>OK</button>
       <table>
-        {tomb.map((n, index) => (<Kiir auto={n} key={index} />))}
+        <tbody>
+          {tomb.map((n, index) => (<Kiir auto={n} key={index} />))}
+        </tbody>
       </table>
     </>
   )
