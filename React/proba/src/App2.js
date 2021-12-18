@@ -1,21 +1,16 @@
 import './App.css';
+import Kiir from "./Kiir";
 import {useState} from 'react';
-
-function App2(props) {
-    const [szam, setszam] = useState(0);
+function App() {
+  const [tomb, setTomb]=useState(["Laci","Kati","Ákos","Lenke"]);
+  const neve="Piri";
+  let ujtomb=tomb.concat(neve);
+  setTomb(ujtomb);
   return (
-    <div className={props.cnev} >
-        <button onClick={() => setszam(0)}>RESET</button>
-        <br/>
-        
-        <button onClick={() => setszam(szam+props.dif)}>+</button>
-
-        <button onClick={() => setszam(szam-props.dif)}>-</button> 
-
-
-        <p>{szam}</p>
-    </div>
+    <ul>
+      {tomb.map((n,index)=>(<Kiir nev={n} key={index} />))}
+    </ul>
   );
 }
 
-export default App2;
+export default App;

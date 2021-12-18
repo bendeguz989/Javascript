@@ -37,26 +37,5 @@
   }
 }
 td{
-  border: 2px solid #4999;
-}
-.piros{
-  width: 50%;
-  border: 2px solid rgb(247, 243, 2);
-  background-color: rgba(136, 5, 224, 0.527);
-  margin: 20px auto;  
-}
-.kek{
-  width: 50%;
-  border: 2px solid rgb(247, 2, 2);
-  background-color: rgba(5, 198, 224, 0.733);
-  margin: 20px auto;  
-}
-.zöld{
-  width: 50%;
-  border: 2px solid rgb(0, 0, 0);
-  background-color: rgba(78, 255, 8, 0.733);
-  margin: 20px auto;  
-}
-li{
-  
+  border: 2px solid blue;
 }

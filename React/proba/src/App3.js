@@ -1,15 +1,29 @@
 import './App.css';
-import {useState} from 'react';
-import App2 from './App2';
+import Kiir from './Kiir';
+import react, {useState} from 'react';
 
-function App3() {
+function App() {
+  const [nevek, setnevek]=useState(["Kati" , "Feri", "Peti"]);
   return (
-    <div>
-        <App2 cnev = "piros" dif = {2}/>
-        <App2 cnev = "kek" dif = {5}/>
-        <App2 cnev = "zöld" dif = {10}/>
+    <div className="App">
+    <label for="n">Név:</label>
+    <input type="text" name="n" id="ne" />
+    
+   
+    <button onClick={()=>{
+        const neve=document.getElementById("ne").value;
+        let ns=nevek.concat(neve);
+        setnevek(ns);
+    }}>OK</button>
+      <table>
+      <tbody>
+        {nevek.map((n,index)=><Kiir nev={n} key={index} />)}
+        
+        </tbody>
+    </table>
+      
     </div>
   );
 }
 
-export default App3;
+export default App;
