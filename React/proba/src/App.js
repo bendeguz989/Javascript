@@ -3,7 +3,7 @@ import Kiir from "./Kiir";
 import { useState } from 'react';
 import Beker from "./Beker";
 function App() {
-  const [tomb, setTomb] = useState(["kitti", "Kati", "Peti"]);
+  const [tomb, setTomb] = useState(["Kitti", "Kati", "Peti"]);
   const [nev,setNev]=useState(null);
   const [cim,setCim]=useState(null);
   const [nem,setNem]=useState(null);

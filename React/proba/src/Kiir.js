@@ -1,6 +1,11 @@
 function Kiir(props){
 return(
- <li>{props.nev} {props.cim} {props.nem}</li>
+    <tr>
+        <td>{props.auto.marka}</td>
+        <td>{props.auto.fogyaszt()}</td>
+        
+    </tr>
+ 
 )
 }
 export default Kiir

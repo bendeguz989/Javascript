@@ -1,5 +1,7 @@
 import './st.css';
 import { useState ,useEffect} from 'react';
+
+
 function Beker(props){
   const [adat,setAdat]=useState(null);
   useEffect(
