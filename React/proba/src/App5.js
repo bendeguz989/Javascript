@@ -2,6 +2,7 @@ import './App.css';
 import Kiir from "./Kiir";
 import { useState } from 'react';
 import Beker from "./Beker";
+
 function App() {
   function Auto(marka,motor,benzin){
     this.marka=marka;
